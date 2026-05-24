@@ -1,12 +1,19 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", color: "#0f172a" }}>
-      
+    <main
+      style={{
+        fontFamily: "Arial",
+        margin: 0,
+        padding: 0,
+        background: "#ffffff",
+        color: "#0f172a",
+      }}
+    >
       {/* HERO */}
       <section
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop')",
+          background:
+            "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "120px 20px",
@@ -14,19 +21,10 @@ export default function Home() {
           color: "white",
         }}
       >
-        <img
-          src="https://i.imgur.com/VpD4hZA.png"
-          alt="Zhuenix Supply"
-          style={{
-            width: "180px",
-            marginBottom: "20px",
-          }}
-        />
-
         <h1
           style={{
-            fontSize: "56px",
-            marginBottom: "10px",
+            fontSize: "60px",
+            marginBottom: "20px",
           }}
         >
           Zhuenix Supply
@@ -37,11 +35,10 @@ export default function Home() {
             fontSize: "22px",
             maxWidth: "800px",
             margin: "0 auto",
-            lineHeight: "1.7",
+            lineHeight: "1.8",
           }}
         >
-          Professional China sourcing, warehousing, logistics and global
-          supply chain solutions.
+          Source • Supply • Succeed
         </p>
       </section>
 
@@ -49,15 +46,15 @@ export default function Home() {
       <section
         style={{
           padding: "80px 20px",
-          maxWidth: "1200px",
+          maxWidth: "1100px",
           margin: "0 auto",
+          textAlign: "center",
         }}
       >
         <h2
           style={{
             fontSize: "42px",
-            marginBottom: "20px",
-            textAlign: "center",
+            marginBottom: "25px",
           }}
         >
           About Zhuenix Supply
@@ -67,13 +64,12 @@ export default function Home() {
           style={{
             fontSize: "20px",
             lineHeight: "1.9",
-            textAlign: "center",
-            color: "#334155",
+            color: "#475569",
           }}
         >
-          Zhuenix Supply helps global businesses connect with trusted Chinese
-          manufacturers, warehouses, and logistics partners. We provide
-          efficient sourcing, fulfillment, and shipping services worldwide.
+          Zhuenix Supply is a professional China sourcing and global supply
+          chain partner helping businesses connect with trusted factories,
+          warehousing solutions, and worldwide logistics services.
         </p>
       </section>
 
@@ -97,23 +93,23 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
             gap: "30px",
             maxWidth: "1200px",
             margin: "0 auto",
           }}
         >
-          {/* CARD 1 */}
           <div
             style={{
               background: "white",
               borderRadius: "16px",
               overflow: "hidden",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
             }}
           >
             <img
               src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
+              alt="Factory"
               style={{
                 width: "100%",
                 height: "220px",
@@ -122,26 +118,25 @@ export default function Home() {
             />
 
             <div style={{ padding: "25px" }}>
-              <h3 style={{ fontSize: "28px" }}>Factory Sourcing</h3>
+              <h3>Factory Sourcing</h3>
 
-              <p style={{ lineHeight: "1.8", color: "#475569" }}>
-                Connect with reliable manufacturers across China for efficient
-                product sourcing and production.
+              <p style={{ color: "#475569", lineHeight: "1.8" }}>
+                Connect with reliable manufacturers and suppliers across China.
               </p>
             </div>
           </div>
 
-          {/* CARD 2 */}
           <div
             style={{
               background: "white",
               borderRadius: "16px",
               overflow: "hidden",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
             }}
           >
             <img
               src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop"
+              alt="Warehouse"
               style={{
                 width: "100%",
                 height: "220px",
@@ -150,26 +145,25 @@ export default function Home() {
             />
 
             <div style={{ padding: "25px" }}>
-              <h3 style={{ fontSize: "28px" }}>Warehousing</h3>
+              <h3>Warehousing</h3>
 
-              <p style={{ lineHeight: "1.8", color: "#475569" }}>
-                Safe inventory storage and fulfillment services with efficient
-                warehouse management.
+              <p style={{ color: "#475569", lineHeight: "1.8" }}>
+                Secure inventory storage and professional fulfillment services.
               </p>
             </div>
           </div>
 
-          {/* CARD 3 */}
           <div
             style={{
               background: "white",
               borderRadius: "16px",
               overflow: "hidden",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
             }}
           >
             <img
               src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"
+              alt="Shipping"
               style={{
                 width: "100%",
                 height: "220px",
@@ -178,11 +172,10 @@ export default function Home() {
             />
 
             <div style={{ padding: "25px" }}>
-              <h3 style={{ fontSize: "28px" }}>Global Shipping</h3>
+              <h3>Global Shipping</h3>
 
-              <p style={{ lineHeight: "1.8", color: "#475569" }}>
-                Worldwide air, sea and container logistics solutions for modern
-                businesses.
+              <p style={{ color: "#475569", lineHeight: "1.8" }}>
+                Worldwide air freight, sea freight and container logistics.
               </p>
             </div>
           </div>
@@ -201,13 +194,13 @@ export default function Home() {
         <h2
           style={{
             fontSize: "40px",
-            marginBottom: "25px",
+            marginBottom: "20px",
           }}
         >
           Contact Us
         </h2>
 
-        <p style={{ fontSize: "20px", marginBottom: "10px" }}>
+        <p style={{ fontSize: "20px" }}>
           Email: contact@zhuenixsupply.com
         </p>
 
