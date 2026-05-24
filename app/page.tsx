@@ -1,90 +1,120 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main
       style={{
-        fontFamily: "Arial",
-        margin: 0,
-        padding: 0,
-        background: "#ffffff",
-        color: "#0f172a",
+        fontFamily: "Arial, sans-serif",
+        backgroundColor: "#f5f7fa",
+        color: "#111",
       }}
     >
-      {/* HERO */}
-      <section
+      {/* Header */}
+      <header
         style={{
-          background:
-            "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          padding: "120px 20px",
-          textAlign: "center",
-          color: "white",
+          background: "#ffffff",
+          padding: "20px 40px",
+          borderBottom: "1px solid #ddd",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
         }}
       >
-        <h1
+        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+          <Image
+            src="/logo.png"
+            alt="Zhuenix Supply"
+            width={70}
+            height={70}
+          />
+          <div>
+            <h1
+              style={{
+                margin: 0,
+                fontSize: "28px",
+                color: "#003366",
+              }}
+            >
+              Zhuenix Supply
+            </h1>
+            <p
+              style={{
+                margin: 0,
+                color: "#00a6a6",
+                fontSize: "14px",
+              }}
+            >
+              Source • Supply • Succeed
+            </p>
+          </div>
+        </div>
+
+        <a
+          href="https://wa.me/8618159917333"
+          target="_blank"
           style={{
-            fontSize: "60px",
-            marginBottom: "20px",
+            background: "#00a884",
+            color: "#fff",
+            padding: "12px 20px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
           }}
         >
-          Zhuenix Supply
-        </h1>
+          WhatsApp
+        </a>
+      </header>
 
-        <p
-          style={{
-            fontSize: "22px",
-            maxWidth: "800px",
-            margin: "0 auto",
-            lineHeight: "1.8",
-          }}
-        >
-          Source • Supply • Succeed
-        </p>
-      </section>
-
-      {/* ABOUT */}
+      {/* Hero */}
       <section
         style={{
-          padding: "80px 20px",
-          maxWidth: "1100px",
-          margin: "0 auto",
           textAlign: "center",
+          padding: "100px 20px",
+          background:
+            "linear-gradient(135deg, #003366 0%, #00a6a6 100%)",
+          color: "#fff",
         }}
       >
         <h2
           style={{
-            fontSize: "42px",
-            marginBottom: "25px",
+            fontSize: "54px",
+            marginBottom: "20px",
           }}
         >
-          About Zhuenix Supply
+          Global Supply Chain Partner
         </h2>
 
         <p
           style={{
-            fontSize: "20px",
-            lineHeight: "1.9",
-            color: "#475569",
+            maxWidth: "850px",
+            margin: "0 auto",
+            fontSize: "22px",
+            lineHeight: "1.8",
           }}
         >
-          Zhuenix Supply is a professional China sourcing and global supply
-          chain partner helping businesses connect with trusted factories,
-          warehousing solutions, and worldwide logistics services.
+          Zhuenix Supply helps global businesses connect with reliable
+          Chinese manufacturers, warehousing services, and international
+          logistics solutions.
         </p>
       </section>
 
-      {/* SERVICES */}
+      {/* Services */}
       <section
         style={{
-          background: "#f8fafc",
           padding: "80px 20px",
+          maxWidth: "1200px",
+          margin: "0 auto",
         }}
       >
         <h2
           style={{
             textAlign: "center",
             fontSize: "42px",
-            marginBottom: "50px",
+            marginBottom: "60px",
+            color: "#003366",
           }}
         >
           Our Services
@@ -93,121 +123,142 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             gap: "30px",
-            maxWidth: "1200px",
-            margin: "0 auto",
           }}
         >
+          {/* Card 1 */}
           <div
             style={{
-              background: "white",
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+              background: "#fff",
+              borderRadius: "18px",
+              padding: "35px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
-              alt="Factory"
+            <h3
               style={{
-                width: "100%",
-                height: "220px",
-                objectFit: "cover",
+                color: "#003366",
+                marginBottom: "20px",
               }}
-            />
+            >
+              Factory Sourcing
+            </h3>
 
-            <div style={{ padding: "25px" }}>
-              <h3>Factory Sourcing</h3>
-
-              <p style={{ color: "#475569", lineHeight: "1.8" }}>
-                Connect with reliable manufacturers and suppliers across China.
-              </p>
-            </div>
+            <p style={{ lineHeight: "1.8", color: "#444" }}>
+              Connect with verified manufacturers across China with full
+              sourcing support and supplier management.
+            </p>
           </div>
 
+          {/* Card 2 */}
           <div
             style={{
-              background: "white",
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+              background: "#fff",
+              borderRadius: "18px",
+              padding: "35px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop"
-              alt="Warehouse"
+            <h3
               style={{
-                width: "100%",
-                height: "220px",
-                objectFit: "cover",
+                color: "#003366",
+                marginBottom: "20px",
               }}
-            />
+            >
+              Warehousing
+            </h3>
 
-            <div style={{ padding: "25px" }}>
-              <h3>Warehousing</h3>
-
-              <p style={{ color: "#475569", lineHeight: "1.8" }}>
-                Secure inventory storage and professional fulfillment services.
-              </p>
-            </div>
+            <p style={{ lineHeight: "1.8", color: "#444" }}>
+              Professional inventory storage, consolidation, packaging,
+              and fulfillment solutions.
+            </p>
           </div>
 
+          {/* Card 3 */}
           <div
             style={{
-              background: "white",
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
+              background: "#fff",
+              borderRadius: "18px",
+              padding: "35px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"
-              alt="Shipping"
+            <h3
               style={{
-                width: "100%",
-                height: "220px",
-                objectFit: "cover",
+                color: "#003366",
+                marginBottom: "20px",
               }}
-            />
+            >
+              Global Shipping
+            </h3>
 
-            <div style={{ padding: "25px" }}>
-              <h3>Global Shipping</h3>
-
-              <p style={{ color: "#475569", lineHeight: "1.8" }}>
-                Worldwide air freight, sea freight and container logistics.
-              </p>
-            </div>
+            <p style={{ lineHeight: "1.8", color: "#444" }}>
+              Efficient sea freight, air cargo, and container logistics
+              worldwide.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CONTACT */}
+      {/* About */}
       <section
         style={{
-          background: "#0f172a",
-          color: "white",
-          padding: "70px 20px",
-          textAlign: "center",
+          background: "#ffffff",
+          padding: "80px 20px",
         }}
       >
-        <h2
+        <div
           style={{
-            fontSize: "40px",
-            marginBottom: "20px",
+            maxWidth: "1000px",
+            margin: "0 auto",
+            textAlign: "center",
           }}
         >
-          Contact Us
-        </h2>
+          <h2
+            style={{
+              fontSize: "42px",
+              color: "#003366",
+              marginBottom: "30px",
+            }}
+          >
+            About Zhuenix Supply
+          </h2>
 
-        <p style={{ fontSize: "20px" }}>
-          Email: contact@zhuenixsupply.com
-        </p>
-
-        <p style={{ fontSize: "20px" }}>
-          WhatsApp: +86 138 0000 0000
-        </p>
+          <p
+            style={{
+              fontSize: "20px",
+              lineHeight: "2",
+              color: "#444",
+            }}
+          >
+            We provide complete sourcing and supply chain solutions for
+            businesses worldwide. From factory selection to logistics
+            delivery, Zhuenix Supply helps companies reduce costs,
+            improve efficiency, and scale globally.
+          </p>
+        </div>
       </section>
+
+      {/* Footer */}
+      <footer
+        style={{
+          background: "#003366",
+          color: "#fff",
+          textAlign: "center",
+          padding: "50px 20px",
+        }}
+      >
+        <h3 style={{ marginBottom: "20px" }}>Contact Us</h3>
+
+        <p>Email: 337315382@qq.com</p>
+
+        <p>WhatsApp: +86 18159917333</p>
+
+        <p style={{ marginTop: "30px", opacity: 0.7 }}>
+          © 2025 Zhuenix Supply. All rights reserved.
+        </p>
+      </footer>
     </main>
   );
 }
