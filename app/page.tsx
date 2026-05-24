@@ -1,61 +1,27 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main
-      style={{
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: "#f5f7fa",
-        color: "#111",
-      }}
-    >
+    <main className="min-h-screen bg-gray-100 text-[#0A3B78]">
+
       {/* Header */}
-      <header
-        style={{
-          background: "#ffffff",
-          padding: "20px 40px",
-          borderBottom: "1px solid #ddd",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          position: "sticky",
-          top: 0,
-          zIndex: 100,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "15px",
-          }}
-        >
-        <img
-  src="/logo.png"
-  alt="Zhuenix Supply"
-  style={{
-    width: "140px",
-    height: "auto"
-  }}
-/>
+      <header className="bg-white flex items-center justify-between px-10 py-5 shadow-sm">
+        <div className="flex items-center gap-4">
+
+          <Image
+            src="/logo.png"
+            alt="Zhuenix Supply"
+            width={80}
+            height={80}
+            priority
+          />
+
           <div>
-            <h1
-              style={{
-                margin: 0,
-                fontSize: "32px",
-                color: "#003366",
-                fontWeight: "bold",
-              }}
-            >
+            <h1 className="text-4xl font-bold">
               Zhuenix Supply
             </h1>
 
-            <p
-              style={{
-                margin: 0,
-                color: "#00a6a6",
-                fontSize: "15px",
-                marginTop: "5px",
-              }}
-            >
+            <p className="text-cyan-600 text-xl mt-1">
               Source • Supply • Succeed
             </p>
           </div>
@@ -64,252 +30,177 @@ export default function Home() {
         <a
           href="https://wa.me/8618159917333"
           target="_blank"
-          style={{
-            background: "#00a884",
-            color: "#fff",
-            padding: "14px 24px",
-            borderRadius: "10px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "16px",
-          }}
+          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-2xl font-bold transition"
         >
           WhatsApp
         </a>
       </header>
 
       {/* Hero */}
-      <section
-        style={{
-          textAlign: "center",
-          padding: "120px 20px",
-          background:
-            "linear-gradient(135deg, #003366 0%, #00a6a6 100%)",
-          color: "#fff",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "58px",
-            marginBottom: "25px",
-            fontWeight: "bold",
-          }}
-        >
-          Global Supply Chain Partner
-        </h2>
+      <section className="relative h-[700px] flex items-center justify-center text-center overflow-hidden">
 
-        <p
-          style={{
-            maxWidth: "900px",
-            margin: "0 auto",
-            fontSize: "24px",
-            lineHeight: "1.8",
-          }}
-        >
-          Zhuenix Supply helps global businesses connect with
-          reliable Chinese manufacturers, warehousing services,
-          and international logistics solutions.
-        </p>
-      </section>
+        <Image
+          src="/hero.jpg"
+          alt="Hero"
+          fill
+          className="object-cover"
+          priority
+        />
 
-      {/* Services */}
-      <section
-        style={{
-          padding: "90px 20px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "44px",
-            marginBottom: "60px",
-            color: "#003366",
-          }}
-        >
-          Our Services
-        </h2>
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "30px",
-          }}
-        >
-          {/* Factory */}
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "20px",
-              padding: "35px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h3
-              style={{
-                color: "#003366",
-                marginBottom: "20px",
-                fontSize: "28px",
-              }}
-            >
-              Factory Sourcing
-            </h3>
-
-            <p
-              style={{
-                lineHeight: "1.8",
-                color: "#444",
-                fontSize: "18px",
-              }}
-            >
-              Connect with verified manufacturers across China
-              with complete sourcing support and supplier
-              management.
-            </p>
-          </div>
-
-          {/* Warehouse */}
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "20px",
-              padding: "35px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h3
-              style={{
-                color: "#003366",
-                marginBottom: "20px",
-                fontSize: "28px",
-              }}
-            >
-              Warehousing
-            </h3>
-
-            <p
-              style={{
-                lineHeight: "1.8",
-                color: "#444",
-                fontSize: "18px",
-              }}
-            >
-              Professional inventory storage, consolidation,
-              packaging, and fulfillment solutions.
-            </p>
-          </div>
-
-          {/* Shipping */}
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "20px",
-              padding: "35px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h3
-              style={{
-                color: "#003366",
-                marginBottom: "20px",
-                fontSize: "28px",
-              }}
-            >
-              Global Shipping
-            </h3>
-
-            <p
-              style={{
-                lineHeight: "1.8",
-                color: "#444",
-                fontSize: "18px",
-              }}
-            >
-              Efficient sea freight, air cargo, and container
-              logistics worldwide.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About */}
-      <section
-        style={{
-          background: "#ffffff",
-          padding: "90px 20px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1000px",
-            margin: "0 auto",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "44px",
-              color: "#003366",
-              marginBottom: "30px",
-            }}
-          >
-            About Zhuenix Supply
+        <div className="relative z-10 px-6">
+          <h2 className="text-7xl font-bold text-white mb-10">
+            Global Supply Chain Partner
           </h2>
 
-          <p
-            style={{
-              fontSize: "21px",
-              lineHeight: "2",
-              color: "#444",
-            }}
-          >
-            We provide complete sourcing and supply chain
-            solutions for businesses worldwide. From factory
-            selection to logistics delivery, Zhuenix Supply
-            helps companies reduce costs, improve efficiency,
-            and scale globally.
+          <p className="text-3xl text-white leading-relaxed max-w-5xl">
+            Zhuenix Supply helps global businesses connect with reliable Chinese manufacturers,
+            warehousing services, and international logistics solutions.
           </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer
-        style={{
-          background: "#003366",
-          color: "#fff",
-          textAlign: "center",
-          padding: "60px 20px",
-        }}
-      >
-        <h3
-          style={{
-            marginBottom: "25px",
-            fontSize: "32px",
-          }}
-        >
-          Contact Us
-        </h3>
+      {/* Services */}
+      <section className="py-28 px-10">
+        <h2 className="text-6xl font-bold text-center mb-20">
+          Our Services
+        </h2>
 
-        <p style={{ fontSize: "20px" }}>
-          Email: 337315382@qq.com
-        </p>
+        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
 
-        <p style={{ fontSize: "20px" }}>
-          WhatsApp: +86 18159917333
-        </p>
+          {/* Factory */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
 
-        <p
-          style={{
-            marginTop: "35px",
-            opacity: 0.7,
-          }}
-        >
-          © 2025 Zhuenix Supply. All rights reserved.
-        </p>
-      </footer>
+            <Image
+              src="/factory.jpg"
+              alt="Factory"
+              width={600}
+              height={400}
+              className="w-full h-[260px] object-cover"
+            />
+
+            <div className="p-8">
+              <h3 className="text-4xl font-bold mb-5">
+                Factory Sourcing
+              </h3>
+
+              <p className="text-2xl leading-relaxed text-gray-700">
+                Connect with verified manufacturers across China with complete sourcing support and supplier management.
+              </p>
+            </div>
+          </div>
+
+          {/* Warehouse */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
+
+            <Image
+              src="/warehouse.jpg."
+              alt="Warehouse"
+              width={600}
+              height={400}
+              className="w-full h-[260px] object-cover"
+            />
+
+            <div className="p-8">
+              <h3 className="text-4xl font-bold mb-5">
+                Warehousing
+              </h3>
+
+              <p className="text-2xl leading-relaxed text-gray-700">
+                Professional inventory storage, consolidation, packaging, and fulfillment solutions.
+              </p>
+            </div>
+          </div>
+
+          {/* Shipping */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl">
+
+            <Image
+              src="/shipping.jpg."
+              alt="Shipping"
+              width={600}
+              height={400}
+              className="w-full h-[260px] object-cover"
+            />
+
+            <div className="p-8">
+              <h3 className="text-4xl font-bold mb-5">
+                Global Shipping
+              </h3>
+
+              <p className="text-2xl leading-relaxed text-gray-700">
+                Efficient sea freight, air cargo, and container logistics worldwide.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="bg-white py-28">
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center px-10">
+
+          <div>
+            <h2 className="text-6xl font-bold mb-10">
+              关于 Zhuenix Supply
+            </h2>
+
+            <p className="text-3xl leading-relaxed text-gray-700">
+              我们为全球企业提供完整的采购和供应链解决方案。
+              从工厂选择到物流配送，Zhuenix Supply 助力企业降低成本、
+              提高效率并实现全球规模化发展。
+            </p>
+          </div>
+
+          <div>
+            <Image
+              src="/about.jpg."
+              alt="About"
+              width={900}
+              height={600}
+              className="rounded-3xl shadow-2xl"
+            />
+          </div>
+
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="relative py-36 text-center overflow-hidden">
+
+        <Image
+          src="/contact.jpg."
+          alt="Contact"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#062E63]/80"></div>
+
+        <div className="relative z-10 text-white">
+
+          <h2 className="text-6xl font-bold mb-10">
+            联系我们
+          </h2>
+
+          <p className="text-3xl mb-6">
+            邮箱：337315382@qq.com
+          </p>
+
+          <p className="text-3xl mb-12">
+            WhatsApp：+86 18159917333
+          </p>
+
+          <p className="text-xl text-gray-300">
+            © 2025 Zhuenix Supply. 版权所有。
+          </p>
+
+        </div>
+      </section>
+
     </main>
   );
 }
