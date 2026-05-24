@@ -28,16 +28,14 @@ export default function Home() {
             gap: "15px",
           }}
         >
-          <img
-            src="/logo.png"
-            alt="Zhuenix Supply"
-            style={{
-              width: "90px",
-              height: "90px",
-              objectFit: "contain",
-            }}
-          />
-
+        <img
+  src="/logo.png"
+  alt="Zhuenix Supply"
+  style={{
+    width: "140px",
+    height: "auto"
+  }}
+/>
           <div>
             <h1
               style={{
