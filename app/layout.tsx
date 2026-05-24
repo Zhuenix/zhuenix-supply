@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Zhuenix Supply",
-  description: "China sourcing and supply chain partner",
+  description: "Global Supply Chain Partner",
 };
 
 export default function RootLayout({
