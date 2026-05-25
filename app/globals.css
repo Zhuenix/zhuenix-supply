@@ -70,11 +70,17 @@ body{
   gap:40px;
 }
 
-.card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card img{
@@ -93,6 +99,9 @@ body{
   padding:0 30px 40px;
   font-size:20px;
   line-height:1.8;
+
+  max-width:90%;
+  margin:0 auto;
 }
 
 /* ABOUT */
