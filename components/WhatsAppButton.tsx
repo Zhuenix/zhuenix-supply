@@ -4,25 +4,26 @@ export default function WhatsAppButton() {
       href="https://wa.me/8618159917333?text=Hello%20I%20am%20interested%20in%20your%20products"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50"
+      style={{
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        backgroundColor: "#25D366",
+        color: "white",
+        padding: "14px 18px",
+        borderRadius: "50px",
+        textDecoration: "none",
+        fontSize: "18px",
+        fontWeight: "bold",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+        zIndex: 9999,
+        display: "flex",
+        alignItems: "center",
+        gap: "10px"
+      }}
     >
-      <div className="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-xl flex items-center gap-2 transition-all">
-        
-        {/* WhatsApp Icon */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 8.004 0C3.58 0 .002 3.577 0 8a7.94 7.94 0 0 0 1.114 4.043L0 16l4.073-1.067A7.93 7.93 0 0 0 8.004 16h.003c4.423 0 8-3.577 8-8a7.94 7.94 0 0 0-2.406-5.674zM8.007 14.5a6.47 6.47 0 0 1-3.293-.9l-.236-.14-2.417.633.647-2.355-.154-.243A6.48 6.48 0 0 1 1.5 8c0-3.59 2.918-6.5 6.507-6.5a6.46 6.46 0 0 1 4.596 1.905A6.46 6.46 0 0 1 14.5 8c0 3.59-2.918 6.5-6.493 6.5zm3.64-4.847c-.2-.1-1.183-.584-1.366-.65-.183-.067-.316-.1-.45.1-.133.2-.516.65-.633.783-.116.133-.233.15-.433.05-.2-.1-.844-.31-1.607-.99-.594-.53-.995-1.183-1.11-1.383-.117-.2-.012-.308.087-.408.09-.09.2-.233.3-.35.1-.116.133-.2.2-.333.067-.133.033-.25-.017-.35-.05-.1-.45-1.083-.616-1.483-.162-.39-.326-.337-.45-.343l-.383-.007c-.133 0-.35.05-.533.25-.183.2-.7.683-.7 1.666 0 .983.716 1.933.816 2.066.1.133 1.41 2.153 3.416 3.02.477.206.85.329 1.14.421.479.152.916.13 1.261.079.385-.057 1.183-.483 1.35-.95.166-.466.166-.866.116-.95-.05-.083-.183-.133-.383-.233z"/>
-        </svg>
-
-        <span className="font-medium">
-          Chat on WhatsApp
-        </span>
-      </div>
+      <span>💬</span>
+      <span>WhatsApp</span>
     </a>
   );
 }
