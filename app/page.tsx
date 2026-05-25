@@ -2,7 +2,7 @@ import WhatsAppButton from "@/components/WhatsAppButton"
 
 export default function Home() {
   return (
-    <>
+    <main>
       {/* HERO */}
       <section className="hero">
         <div className="overlay">
